@@ -1,0 +1,3 @@
+aiodns==1.1.1
+pycares==2.1.1
+uvloop==0.8.0
