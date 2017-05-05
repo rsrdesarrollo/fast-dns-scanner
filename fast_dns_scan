@@ -1,11 +1,13 @@
-import argparse
-from fast_dns_scan.aiodns_scanner import AiodnsScanner
+#!/usr/bin/env python3
 
-parser = argparse.ArgumentParser("Fast dns bruteforce subdomain scanner")
-parser.add_argument('-r', '--resolvers', required=False)
-parser.add_argument('-w', '--wordlist')
+import argparse
+from fast_dns_scanner.aiodns_scanner import AiodnsScanner
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-r', '--resolvers', required=False, help="file with DNS servers (one on each line)")
+parser.add_argument('-w', '--wordlist', help="wordlist file with host to search on domains")
 parser.add_argument('--timeout', type=float, default=1.0, help="Timeout for queries in seconds (float).")
-parser.add_argument('domains', nargs='+')
+parser.add_argument('domains', nargs='+', help="one or more domains")
 
 
 ops = parser.parse_args()

@@ -4,7 +4,7 @@ import aiodns
 import random
 import sys
 
-from fast_dns_scan.scanner_base import ScannerBase
+from fast_dns_scanner.scanner_base import ScannerBase
 
 
 class AiodnsScanner(ScannerBase):
